@@ -1,7 +1,7 @@
 const PORT = 8000
 const express = require('express')
 const cors = require('cors')
-require('dotenv').config
+require('dotenv').config()
 const app = express()
 app.use(express.json())
 app.use(cors())
@@ -32,4 +32,5 @@ app.post('/completions', async(req, res) =>{
         console.error(error)
     }
 })
+
 app.listen(PORT, () => console.log('Your server is running on PORT ' + PORT))

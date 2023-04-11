@@ -45,7 +45,6 @@ const App = () =>{
   }
   
   useEffect(() => {
-    console.log(currentTitle, value)
 
     if(!currentTitle && value && message){
       setCurrentTitle(value)
@@ -71,10 +70,8 @@ const App = () =>{
 
   }, [message, currentTitle])
 
-  console.log(previousChats)
   const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
-  const uniqueTitles = Array.from(previousChats.map(previousChat => previousChat.title))
-  console.log(uniqueTitles)
+  const uniqueTitles = Array.from(new Set(previousChats.map(previousChat => previousChat.title)))
 
   return (
     <div className="app">

@@ -107,7 +107,7 @@ input{
 }
 
 .feed{
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
   padding: 0;
 }
